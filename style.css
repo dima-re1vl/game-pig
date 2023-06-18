@@ -1,0 +1,312 @@
+body {
+	margin: 0;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 15px;
+	color: #333;
+	line-height: 1.6; /*межстрочный оступ*/
+    background: #dd6b00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+html, body {
+    height: 100%;
+}
+
+html {
+    display: table;
+    margin: auto;
+}
+
+body {
+    display: table-cell;
+    vertical-align: middle;
+}
+  
+
+*,
+*:before,
+*:after
+{
+	box-sizing: border-box;
+}
+
+div, p, input, button, form, span, a, ul, li {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+}
+
+hr {
+	border: 0;
+	background-color: #e5e5e5;
+	height: 1px;
+	display: block;
+	width: 100%;
+	margin: 40px 0;
+}
+
+
+
+.container {
+	margin: 0 auto;
+	width: 1170px;
+}
+
+.section {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+.wrapper {
+	display: flex;
+	justify-content: space-between;
+}
+
+.card {
+    width: 400px;
+    height: 500px;
+    background-color: #fff;
+    text-align: center;
+    background-color: rgba(226, 224, 224, 0.9);
+}
+
+.hidden {
+    background-color: rgba(255, 186, 154, 0.6);
+    animation: 0.2s show ease;
+}
+
+@keyframes show {
+    from { opacity: 0.5; }
+    to { opacity: 1; }
+}
+
+.player-1 {
+    border-radius: 10px 0 0 10px;
+}
+
+.player-2 {
+    border-radius: 0 10px 10px 0px;
+}
+
+.player-name {
+    font-size: 25px;
+    margin-top: 50px;
+}
+
+.total-score {
+    font-size: 40px;
+    color: #e46701;
+}
+
+.current {
+    background-color: #e46701;
+    width: 200px;
+    height: 80px;
+    color: #fff;
+    margin: 0 auto;
+    margin-top: 200px;
+    border-radius: 7px;
+    text-align: center;
+    padding: 17px 0;
+}
+
+.current-text {
+    font-weight: normal;
+}
+
+
+.current-score {
+    font-size: 20px;
+}
+
+.info {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 800px;
+    align-items: center;
+}
+
+.btn {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: #fff;
+    border-radius: 20px;
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 180px;
+    height: 35px;
+    opacity: 0.6;
+    filter: saturate(.2);
+}
+
+.btn:hover {
+    opacity: 1;
+    filter: saturate(1);
+}
+
+.new-game {
+    margin-top: 20px;
+}
+
+.throw-cube {
+    margin-top: 100px;
+}
+
+.leave {
+    margin-top: 15px;
+}
+
+.cube {
+    width: 100px;
+    margin-top: 50px;
+}
+
+.win {
+    background-color: #31f54b;
+    animation: 0.5s show ease;
+}
+
+.lose {
+    background-color: #f84646;
+    animation: 0.5s show ease;
+}
+
+/*768px - 992px*/
+@media screen and (max-width: 992px) {
+    .card {
+        width: 370px;
+    }
+
+    .info {
+        width: 740px;
+    }
+
+    .btn {
+        width: 150px;
+        height: 45px;
+    }
+}
+
+/*576px - 768px*/
+@media screen and (max-width: 768px) {
+    .wrapper {
+        flex-direction: column;
+    }
+
+    .card {
+        height: 250px;
+    }
+
+    .player-1 {
+        border-radius: 10px 10px 0 0;
+    }
+    
+    .player-2 {
+        border-radius: 0 0 10px 10px;
+    }
+
+    .current {
+        margin-top: 0;
+        width: 150px;
+        height: 60px;
+        padding: 10px 0;
+        font-size: 12px;
+    }
+
+    .info {
+        flex-direction: column;
+        justify-content: start;
+        height: 500px;
+        width: 370px;
+        position: absolute;
+        right: 50%;
+    }
+    
+    .leave {
+        margin-top: 30px;
+    }
+
+    .cube {
+        width: 80px;
+        margin-top: 100px;
+    }
+
+    .game {
+        margin-left: 200px;
+    }
+
+    .throw-cube {
+        margin-top: 60px;
+    }
+}
+
+/*320px - 576px*/
+@media screen and (max-width: 576px) {
+    .wrapper {
+        flex-direction: column;
+    }
+
+    .card {
+        height: 250px;
+        width: 180px;
+    }
+
+    .player-1 {
+        border-radius: 10px 10px 0 0;
+    }
+    
+    .player-2 {
+        border-radius: 0 0 10px 10px;
+    }
+
+    .current {
+        margin-top: 0;
+        width: 150px;
+        height: 60px;
+        padding: 10px 0;
+        font-size: 12px;
+    }
+
+    .info {
+        flex-direction: column;
+        justify-content: start;
+        height: 500px;
+        width: 370px;
+        position: absolute;
+        left: -20%;
+        margin-top: -10px;
+    }
+    
+    .leave {
+        margin-top: 30px;
+    }
+
+    .cube {
+        width: 80px;
+        margin-top: 100px;
+    }
+
+    .game {
+        margin-left: 150px;
+    }
+
+    .throw-cube {
+        margin-top: 60px;
+    }
+
+    .btn {
+        width: 120px;
+        height: 70px;
+    }
+}
