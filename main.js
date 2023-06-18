@@ -13,7 +13,7 @@ let isPlayer1 = true;
 
 
 throw_cube.addEventListener('click', () => {
-    if (total_score[0].innerHTML <= 10 && total_score[1].innerHTML <= 10) {
+    if (total_score[0].innerHTML <= 100 && total_score[1].innerHTML <= 100) {
         let random = Math.trunc(Math.random() * 6) + 1;
         img.src = `img/dice${random}.png`
         if (isPlayer1) {
@@ -37,11 +37,11 @@ throw_cube.addEventListener('click', () => {
 }}})
 
 leave.addEventListener('click', () => {
-    if (total_score[0].innerHTML <= 10 && total_score[1].innerHTML <= 10) {
+    if (total_score[0].innerHTML <= 100 && total_score[1].innerHTML <= 100) {
         if (isPlayer1) {
             total_score[0].innerHTML = parseInt(total_score[0].innerHTML) + parseInt(current_score[0].innerHTML);
             current_score[0].innerHTML = 0;
-            if (total_score[0].innerHTML >= 10) {
+            if (total_score[0].innerHTML >= 100) {
                 player_1.classList.add('win')
                 player_2.classList.add('lose')
             }
@@ -51,7 +51,7 @@ leave.addEventListener('click', () => {
         } else {
             total_score[1].innerHTML = parseInt(total_score[1].innerHTML) + parseInt(current_score[1].innerHTML);
             current_score[1].innerHTML = 0;
-            if (total_score[1].innerHTML >= 10) {
+            if (total_score[1].innerHTML >= 100) {
                 player_2.classList.add('win')
                 player_1.classList.add('lose')
             }
